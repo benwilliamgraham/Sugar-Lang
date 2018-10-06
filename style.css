@@ -8,14 +8,35 @@ body {
 }
 
 #header {
-  border-bottom: 1px solid #ccc;
   background: #fff;
   padding: 30px 24px 24px 24px;
   position: relative;
+  border-bottom: 1px solid #ddd
 }
 
 #header > a {
   text-decoration: none;
+}
+
+#header div.site-links {
+  overflow: hidden;
+  border-top: 5px solid #a67a6f;
+  background: #6e6660;
+  padding: 0 0 0 8px;
+  border-bottom-left-radius:  20px;
+  border-bottom-right-radius: 20px;
+}
+
+#header div.site-links > a {
+  color: #F6F6F3;
+  text-shadow: 0 1px 0 #000;
+  background-color: #6e6660;
+  display: inline-block;
+  padding: 9px 12px;
+  font-weight: normal;
+  text-decoration: none;
+  float: center;
+  font-size: 15px;
 }
 
 .container {
@@ -27,13 +48,14 @@ body {
 #header h1 {
   font-size: 36px;
   margin: 0;
-  color: black;
+  color: #a67a6f;
 }
 
 #header h2 {
   margin: 5px 0 0;
   font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: -0.05em;
+  font-weight:100;
   color: #585450;
 }
