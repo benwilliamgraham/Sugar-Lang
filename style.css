@@ -8,21 +8,20 @@ body {
 }
 
 #header {
-  background: #fff;
+  background-size: 222px 68px;
   padding: 30px 24px 24px 24px;
   position: relative;
-  border-bottom: 1px solid #ddd
+  border-bottom: 1px solid #585450
 }
 
 #header > a {
   text-decoration: none;
-  background: url(Logo.png) no-repeat left 8px;
 }
 
 #header div.site-links {
   overflow: hidden;
-  border-top: 5px solid #a67a6f;
-  background: #6e6660;
+  border-top: 5px solid #d11d57;
+  background: #540c23;
   padding: 0 0 0 8px;
   border-bottom-left-radius:  20px;
   border-bottom-right-radius: 20px;
@@ -31,7 +30,7 @@ body {
 #header div.site-links > a {
   color: #F6F6F3;
   text-shadow: 0 1px 0 #000;
-  background-color: #6e6660;
+  background-color: #540c23;
   display: inline-block;
   padding: 9px 12px;
   font-weight: normal;
@@ -43,13 +42,7 @@ body {
 .container {
   max-width: 980px;
   margin: 0 auto;
-  text-align: left;
-}
-
-#header h1 {
-  font-size: 36px;
-  margin: 0;
-  color: #a67a6f;
+  text-align: center;
 }
 
 #header h2 {
