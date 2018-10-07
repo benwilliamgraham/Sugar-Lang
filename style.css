@@ -6,42 +6,74 @@ body {
   font-family: "Lucida Console", Monaco, monospace;
   text-align: left;
   margin: auto;
-  max-width: 900px;
 }
 
+#content {
+  align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1 {
+  color: #d11d57
+}
+
+h2 {
+  color: #d11d57
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background-color: #d11d57
+}
 
 
 
 #header {
   padding: 30px 24px 24px 24px;
-  border-bottom: 1px solid #585450
+  background: #d11d57;
 }
 
-#header > a {
+#logo {
+  text-align: left;
+  max-width: 900px;
+  margin: auto;
+}
+
+#logo > a {
   text-decoration: none;
 }
 
-#header h2 {
+#logo h2 {
   margin: 5px 0 0;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #000;
   font-size: 17px;
   text-transform: uppercase;
   letter-spacing: -0.05em;
   font-weight:100;
-  color: #585450;
+  color: #F6F6F3;
 }
 
 #navbar {
   overflow: hidden;
   border-top: 4px solid #d11d57;
+  border-bottom: 1px solid #585450;
   background: #540c23;
   padding: 0 0 0 0;
   border-bottom-left-radius:  3px;
   border-bottom-right-radius: 3px;
 }
 
-#navbar a {
-  float: left;
-  display: block;
+#links {
+  max-width: 900px;
+  margin: auto;
+}
+
+#links a {
+  float: center;
+  display: inline-block;
   color: #F6F6F3;
   text-align: center;
   padding: 14px 16px;
@@ -50,19 +82,18 @@ body {
   font-size: 17px;
 }
 
-#navbar a:hover {
+#links a:hover {
   background-color: #340013;
   border-bottom-left-radius:  3px;
   border-bottom-right-radius: 3px;
 }
 
-#navbar a.active {
+#links a.active {
   background-color: #d11d57;
 }
 
-.sticky{
+.sticky {
   position: fixed;
   width: 100%;
-  max-width: 900px;
   top: 0;
 }

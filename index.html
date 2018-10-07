@@ -11,24 +11,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="assets/prism_default.css">
 
     <script src="assets/jquery-3.3.1.min.js"></script>
+
+    <script src="assets/prism.js"></script>
 
   </head>
   <!-- Header -->
   <div id="header">
-    <a onclick="getContent('Home'); return false;" href="#">
-      <img id="Home_Link" src="assets/Name.png" atl="Sugar" width = 256px height = 78px>
-      <h2>sweet, speedy, simple programming</h2>
-    </a>
+    <div id="logo">
+      <a onclick="getContent('Home'); return false;" href="#">
+        <img src="assets/Name.png" atl="Sugar" width = 256px height = 78px>
+        <h2>sweet, speedy, simple programming</h2>
+      </a>
+    </div>
   </div>
 
   <!-- Navbar -->
   <div id="navbar">
-    <a id="Downloads_Link" onclick="getContent('Downloads'); return false;" href="#">Downloads</a>
-    <a id="Documentation_Link" onclick="getContent('Documentation'); return false;" href="#">Documentation</a>
-    <a id="Examples_Link" onclick="getContent('Examples'); return false;" href="#">Examples</a>
-    <a id="About_Link" onclick="getContent('About'); return false;" href="#">About</a>
+    <div id="links">
+      <a id="Home_Link" onclick="getContent('Home'); return false;" href="#">Home</a>
+      <a id="Downloads_Link" onclick="getContent('Downloads'); return false;" href="#">Downloads</a>
+      <a id="Documentation_Link" onclick="getContent('Documentation'); return false;" href="#">Documentation</a>
+      <a id="Examples_Link" onclick="getContent('Examples'); return false;" href="#">Examples</a>
+      <a id="About_Link" onclick="getContent('About'); return false;" href="#">About</a>
+    </div>
   </div>
 
   <script>
@@ -49,6 +57,7 @@
 
   <body>
     <!-- Page Content -->
+    <br>
     <div id="content"></div>
     <script>
 
@@ -63,7 +72,6 @@
       });
     }
     getContent("Home");
-
     </script>
 
     <!-- Footer -->
