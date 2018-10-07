@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Basic Setup -->
     <meta charset="utf-8">
 
     <title>Sugar Lang</title>
@@ -12,50 +13,61 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <script src="assets/jquery-3.3.1.min.js"></script>
+
+  </head>
+  <!-- Header -->
+  <div id="header">
+    <a onclick="getContent('Home'); return false;" href="#">
+      <img id="Home_Link" src="assets/Name.png" atl="Sugar" width = 256px height = 78px>
+      <h2>sweet, speedy, simple programming</h2>
+    </a>
+  </div>
+
+  <!-- Navbar -->
+  <div id="navbar">
+    <a id="Downloads_Link" onclick="getContent('Downloads'); return false;" href="#">Downloads</a>
+    <a id="Documentation_Link" onclick="getContent('Documentation'); return false;" href="#">Documentation</a>
+    <a id="Examples_Link" onclick="getContent('Examples'); return false;" href="#">Examples</a>
+    <a id="About_Link" onclick="getContent('About'); return false;" href="#">About</a>
+  </div>
+
+  <script>
+    window.onscroll = function() {stick_header()};
+
+    var header = document.getElementById("navbar");
+    var sticky = header.offsetTop;
+
+    function stick_header() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      }
+      else {
+        header.classList.remove("sticky");
+      }
+    }
+  </script>
+
+  <body>
+    <!-- Page Content -->
+    <div id="content"></div>
     <script>
+
     function getContent(file){
+      var paras = document.getElementsByClassName('active');
+      while(paras[0]) {
+        paras[0].classList.remove("active");
+      }
+      document.getElementById(file + "_Link").classList.add("active");
       $(function(){
         $("#content").load("Pages/"+ file +".html");
       });
     }
     getContent("Home");
+
     </script>
 
-  </head>
-
-    <body>
-      <div id="header">
-      <a onclick="getContent('Home'); return false;" href="#">
-        <img src="assets/Name.png" atl="Sugar" width = 256px height = 78px>
-        <h2>sweet, speedy, simple programming</h2>
-      </a>
-
-      <div id="navigation">
-        <a onclick="getContent('Downloads'); return false;" href="#">Downloads</a>
-        <a onclick="getContent('Documentation'); return false;" href="#">Documentation</a>
-        <a onclick="getContent('Examples'); return false;" href="#">Examples</a>
-        <a onclick="getContent('About'); return false;" href="#">About</a>
-      </div>
-
-      <script>
-      window.onscroll = function() {stick_header()};
-
-      var header = document.getElementById("navigation");
-      var sticky = header.offsetTop;
-
-      function stick_header() {
-        if (window.pageYOffset > sticky) {
-          header.classList.add("sticky");
-        } else {
-          header.classList.remove("sticky");
-        }
-      }
-      </script>
-    </div>
+    <!-- Footer -->
 
 
-
-
-    <div id="content"></div>
   </body>
 </html>
