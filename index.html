@@ -11,16 +11,51 @@
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="assets/jquery-3.3.1.min.js"></script>
     <script>
-    $(function(){
-      $("#header").load("header.html");
-    });
+    function getContent(file){
+      $(function(){
+        $("#content").load("Pages/"+ file +".html");
+      });
+    }
+    getContent("Home");
     </script>
 
   </head>
 
-  <body>
-    <div id="header"></div>
+    <body>
+      <div id="header">
+      <a onclick="getContent('Home'); return false;" href="#">
+        <img src="assets/Name.png" atl="Sugar" width = 256px height = 78px>
+        <h2>sweet, speedy, simple programming</h2>
+      </a>
+
+      <div id="navigation">
+        <a onclick="getContent('Downloads'); return false;" href="#">Downloads</a>
+        <a onclick="getContent('Documentation'); return false;" href="#">Documentation</a>
+        <a onclick="getContent('Examples'); return false;" href="#">Examples</a>
+        <a onclick="getContent('About'); return false;" href="#">About</a>
+      </div>
+
+      <script>
+      window.onscroll = function() {stick_header()};
+
+      var header = document.getElementById("navigation");
+      var sticky = header.offsetTop;
+
+      function stick_header() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+      </script>
+    </div>
+
+
+
+
+    <div id="content"></div>
   </body>
 </html>
