@@ -1,19 +1,39 @@
 <h1>Home Page</h1>
 <hr>
-<pre>
-  <code class="language-sugar">
-  `This is a comment`
-  main() :=
-    a = 10
-    b = 20
-    "Welcome to Sugar" -> write</code>
-<script>
-Prism.highlightAll();
-</script>
-</pre>
+<div style="width: 100%; display: table;">
+  <div style="display: table-row;">
+    <div style="display: table-cell; width: 400px;">Sugar</div>
+    <div style="display: table-cell; width: 400px;">C++</div>
+  </div>
+  <div style="display: table-row;">
+    <div style="display: table-cell; width: 400px;">
+      <pre>
+        <code class="language-sugar">
+`This is a comment`
+main() :=
+  a := 10
+  b := 20
+  "Welcome to Sugar" -> write
+        </code>
+      </pre>
+    </div>
+    <div style="display: table-cell; width: 400px;">
+      <pre>
+        <code class="language-cpp">
+//This is a comment
+void main(){
+  int a = 10;
+  int b = 20;
+  std::cout << "Welcome to C++" << std::endl;</code>
+}
+      </pre>
+    </div>
+  </div>
+</div>
 <br>
 <br>
 <h2>Why Sugar?</h2>
 <hr>
 Because
 <br>
+<script>Prism.highlightAll();</script>
