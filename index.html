@@ -31,29 +31,11 @@
   <!-- Navbar -->
   <div id="navbar">
     <div id="links">
-      <a id="Home_Link" onclick="getContent('Home'); return false;" href="#">Home</a>
-      <a id="Downloads_Link" onclick="getContent('Downloads'); return false;" href="#">Downloads</a>
-      <a id="Documentation_Link" onclick="getContent('Documentation'); return false;" href="#">Documentation</a>
-      <a id="Examples_Link" onclick="getContent('Examples'); return false;" href="#">Examples</a>
       <a id="About_Link" onclick="getContent('About'); return false;" href="#">About</a>
+      <a id="Tutorial_Link" onclick="getContent('Tutorial'); return false;" href="#">Tutorial</a>
+      <a id="Get_Sugar_Link" onclick="getContent('Get_Sugar'); return false;" href="#">Get Sugar</a>
     </div>
   </div>
-
-  <script>
-    window.onscroll = function() {stick_header()};
-
-    var header = document.getElementById("navbar");
-    var sticky = header.offsetTop;
-
-    function stick_header() {
-      if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-      }
-      else {
-        header.classList.remove("sticky");
-      }
-    }
-  </script>
 
   <body>
     <!-- Page Content -->
@@ -71,11 +53,17 @@
         $("#content").load("Pages/"+ file +".html");
       });
     }
-    getContent("Home");
+    getContent("About");
     </script>
 
     <!-- Footer -->
-
+    <br>
+    <br>
+    <div id="footer">
+      <hr>
+© 2018 Benjamin W Graham - Carnegie Mellon University - Class of 2022
+      <hr>
+    </div>
 
   </body>
 </html>
