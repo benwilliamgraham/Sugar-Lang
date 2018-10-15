@@ -4,7 +4,7 @@ Get an overview of how Sugar works, as well as how to use it effectively
 <br><br>
 
 <h2>Setup</h2><hr><pre><code class="language-sugar">
-`INSTALL`
+`To be finished later`
 
 </code></pre><br><br>
 
@@ -15,38 +15,208 @@ main() :=
 
 </code></pre><br><br>
 
-<h2>Literals</h2><hr><pre><code class="language-sugar">
-`INSTALL`
+<h2>Comments</h2><hr><pre><code class="language-sugar">
+`This is a comment`
+
+`Comments can extend
+across multiple lines`
+
+`Comments are ignored by the compiler even if they are valid code`
 
 </code></pre><br><br>
 
-<h2>Declarations</h2><hr><pre><code class="language-sugar">
-`INSTALL`
+<h2>Variables</h2><hr><pre><code class="language-sugar">
+`Everything is made up of three things in Sugar:
+  -  Variables
+  -  Functions
+  -  Objects
+
+We'll start with the most basic of them, variables
+
+Variables are a way to store many forms of data.
+
+Sugar is what is known as a strongly-typed language
+This means that a variable has a non-changing type
+For example:`
+
+a := 10 `'a' is set to an int (integer) value
+
+Integers are any whole number`
+
+b := "Test" `'b' is set to a string value
+
+strings are fixed lists of characters (letters, numbers, symbols)`
+
+c := true `'c' is set to a boolean value
+
+boolean values are either 'true' or 'false'
+This will become important later when you learn control flow`
+
+`Variables can be changed as long as they keep thier original type`
+
+a := 11 `changes the value of 'a' to 11`
+
+`However variables cannot be chaged to a different type`
+
+a := "Test 2" `Results in a compiler error`
+
+</code></pre><br><br>
+
+<h2>Forcing Types</h2><hr><pre><code class="language-sugar">
+`You might have noticed that it doesn't say anywhere in the code what types all
+of these variables have been
+
+This is because the compiler can figure all of that out for you most of the time
+
+However, there are cases in which you'll want to tell the compiler to treat a
+variable as a certain type, for example when defining the precision of a number
+
+Fortunately, Sugar provides you with a way to do this:`
+
+a : int := 10 `a will be an integer`
+
+b : float := 10 `b, despite looking like an integer, will be evaluated as a
+single-precision floating-point number
+
+floating point numbers are any real number, for example 7.06`
+
+`However, you cannot always for a type conversion
+
+This is the case for unrelated types`
+
+c : int := "Hello" `Will result in a compiler error`
+
+</code></pre><br><br>
+
+<h2>Standard Types</h2><hr><pre><code class="language-sugar">
+`Sugar inherits it's standard types from c++
+
+Sugar uses the following:
+  -  Short Integer (short)           |  16 bit whole number
+  -  Integer (int)                   |  32 bit whole number
+  -  Long Integer (Long)             |  64 bit whole number
+  -  Character (char)                |  8 bit character
+  -  Wide Character (wchar_t)        |  32 bit character
+  -  Boolean (bool)                  |  1 bit 'true' or 'false'
+  -  Floating Point (float)          |  32 bit decimal number
+  -  Double Floating Point (double)  |  64 bit decimal number
+  -  None (void)                     |
+
+Automatically, it will assign the following:`
+
+a := 10 `int`
+
+b := "z" `char`
+
+c := "abc" `char array (multiple characters)`
+
+d := true `bool`
+
+e := 1.23423 `double`
 
 </code></pre><br><br>
 
 <h2>Operators</h2><hr><pre><code class="language-sugar">
-`INSTALL`
+`Now on to the most ubiquitous kind of function: operators
 
-</code></pre><br><br>
+Operators are symbols that represent changes that can be done to variables
 
-<h2>Formatting</h2><hr><pre><code class="language-sugar">
-`INSTALL`
+For example, '+', '-', '*', and '/' are all operators
+
+The value stored in a variable can be set to something else using operators
+For example:`
+
+a := 30 - 10 `The value of 'a' is equal to 20`
+
+b := "Sugar" + "Lang" `The value of 'b' is equal to "SugarLang"`
+
+`Operators can also be used with variable arguments`
+
+c := a / a `The value of 'c' is equal to 'a' (20) / 'a' (20), which equals 1`
+
+`And can be a mix of variables and constants`
+
+d := a ^ 2 `The value of 'd' is equal to 'a' (20) squared, which equals 400`
+
+`Although they can be used to modify statement values, operators do not effect
+the variables they modify`
+
+d := a + c `The '+' operator does not effect the value stored in 'a' and 'b'`
+
+`There are two kinds of operators: unary and binary
+
+Unary come before the variable they modify`
+
+a := -c `'a' is equal to - 'c' (1), which equals -1`
+
+`Binary come in between the two variables it modifies`
+
+c := c + d `'c' is equal to 'c' (1) + 'd' (400), which equals 401`
+
+`Sugar does not follow the standard order of operations
+Instead it does everything in the following order:
+  -  Unary Operators
+  -  Binary Operators
+  -  Assignment
+
+Also, Sugar comes with several standard operators:`
+&a `reference`
+*a `dereference`
+-a `negate`
++a `value of`
+~a `bitwise complement`
+
+a ^ b `explonent`
+a ;/ b `root`
+
+a * b `multiplication`
+a / b `division`
+a // b `integer division`
+a % b `modulus`
+
+a + b `addition`
+a - b `subtraction`
+
+a << b `left bitwise shift`
+a >> b `right bitwise shift`
+
+a < b `less than`
+a > b `greater than`
+a <= b `less than or equal to`
+a >= b `greater than or equal to`
+a = b `equals`
+a != b `not equal to`
+a <=> b `comparitor`
+
+a & b `bitwise and`
+a | b `bitwise or`
+a >< b `bitwise xor`
+`
 
 </code></pre><br><br>
 
 <h2>Functions</h2><hr><pre><code class="language-sugar">
-`INSTALL`
+`Standard functions are similar to operators:`
+
+a := f(20) `'a' is equal to the value of f(20)`
+
+`Functions can be used in conjunction with variables`
+
+b := g(a)
+
+`And with operators`
+
+c := h(a + 10) + b
+
+`Sugar comes with the following build-in functions:`
+
+write(a) `writes the value of 'a' to the console`
+read() `reads input from the console`
 
 </code></pre><br><br>
 
-<h2>Control Flow</h2><hr><pre><code class="language-sugar">
-`INSTALL`
-
-</code></pre><br><br>
-
-<h2>Types</h2><hr><pre><code class="language-sugar">
-`INSTALL`
+<h2>Defining Functions</h2><hr><pre><code class="language-sugar">
+`All functions can be defined`
 
 </code></pre><br><br>
 
