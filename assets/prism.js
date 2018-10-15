@@ -657,7 +657,7 @@ Prism.languages.sugar = {
 		}
 	],
 	'string': {
-		pattern: /\"[^\`]*\"/,
+		pattern: /\"[^\"]*\"/,
 		greedy: true
 	},
 	'keyword': /\b(?:if|else|while|for|return|in|break|continue)\b/,

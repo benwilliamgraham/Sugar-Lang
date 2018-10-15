@@ -60,6 +60,13 @@ a := 11 `changes the value of 'a' to 11`
 
 a := "Test 2" `Results in a compiler error`
 
+`The names of variables, and for that matter function and objects too, all
+follow the same naming pattern:
+
+The first character must be a letter (lower or upper) or _
+The following characters can be any letter, number, or _
+`
+
 </code></pre><br><br>
 
 <h2>Forcing Types</h2><hr><pre><code class="language-sugar">
@@ -213,19 +220,63 @@ c := h(a + 10) + b
 write(a) `writes the value of 'a' to the console`
 read() `reads input from the console`
 
+short(a) `converts 'a' to a short int (if applicable)`
+int(a) `converts 'a' to an int (if applicable)`
+long(a) `converts 'a' to a long int (if applicable)`
+char(a) `converts 'a' to a character (if applicable)`
+wchar(a) `converts 'a' to a wide character (if applicable)`
+string(a) `converts 'a' to a string (if applicable)`
+bool(a) `converts 'a' to an boolean (if applicable)`
+float(a) `converts 'a' to a single-precision floating point (if applicable)`
+double(a) `converts 'a' to a double-precision floating point (if applicable)`
+
 </code></pre><br><br>
 
 <h2>Defining Functions</h2><hr><pre><code class="language-sugar">
 `All functions can be defined`
 
+f(x) :=
+  x := x + 10
+  return x
+
+`There are several things that should be noticed about this:
+
+One of the most important things to notice is the indentation
+The tab before the two lines following the definition denotes function ownership
+
+Anything that is indented following a definition is interpreted as a part of
+said definition, similar to languages such as Python and Haskell
+
+Also, note that the return statement is the last thing that will happen in the
+function, and that any code following the return statement will not execute
+
+Functions, however, do not need a return statement and will return 'void' if
+not provided with one
+
+Like variables, the return type of a function, as well as the parameter types
+can be specified:`
+
+int_multiply(x : float, y : float) : int :=
+  return x * y
+
+`Despite the two parameters being floats, 'int_multiply' will return an 'int'
+as specified
+
+Custom operators can also be defined like functions:`
+
+(a : int) #^% (b : int) :=
+  return string(a + b - 109 // 3 + 8) + "ragus"
+
+`Bonus, figure out what` 10 #^% 34 `will return`
+
 </code></pre><br><br>
 
-<h2>Lists</h2><hr><pre><code class="language-sugar">
+<h2>Overloading</h2><hr><pre><code class="language-sugar">
 `INSTALL`
 
 </code></pre><br><br>
 
-<h2>Preprocessor Definitions</h2><hr><pre><code class="language-sugar">
+<h2>Control Flow</h2><hr><pre><code class="language-sugar">
 `INSTALL`
 
 </code></pre><br><br>
