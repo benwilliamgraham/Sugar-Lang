@@ -80,10 +80,10 @@ variable as a certain type, for example when defining the precision of a number
 
 Fortunately, Sugar provides you with a way to do this:`
 
-a : int := 10 `a will be an integer`
+a : Int := 10 `a will be an integer`
 
-b : float := 10 `b, despite looking like an integer, will be evaluated as a
-single-precision floating-point number
+b : Float := 10 `b, despite looking like an integer, will be evaluated as a
+floating-point number
 
 floating point numbers are any real number, for example 7.06`
 
@@ -91,35 +91,46 @@ floating point numbers are any real number, for example 7.06`
 
 This is the case for unrelated types`
 
-c : int := "Hello" `Will result in a compiler error`
+c : Int := "Hello" `Will result in a compiler error`
 
 </code></pre><br><br>
 
 <h2>Standard Types</h2><hr><pre><code class="language-sugar">
-`Sugar inherits it's standard types from c++
+`Sugar includes a set of defualt types, as well as being compatible with
+all C++ types
 
 Sugar uses the following:
-  -  Short Integer (short)           |  16 bit whole number
-  -  Integer (int)                   |  32 bit whole number
-  -  Long Integer (Long)             |  64 bit whole number
-  -  Character (char)                |  8 bit character
-  -  Wide Character (wchar_t)        |  32 bit character
-  -  Boolean (bool)                  |  1 bit 'true' or 'false'
-  -  Floating Point (float)          |  32 bit decimal number
-  -  Double Floating Point (double)  |  64 bit decimal number
-  -  None (void)                     |
+  -  Boolean       |  1-bit 'true' or 'false'
 
-Automatically, it will assign the following:`
+  -  Char          |  8-bit character
 
-a := 10 `int`
+  -  Int           |  32-bit integer
+     Int8          |  8-bit integer
+     Int16         |  16-bit integer
+     Int32         |  32-bit integer
+     Int64         |  64-bit integer
 
-b := "z" `char`
+  -  Who           |  32-bit whole-number
+     Who8          |  8-bit whole-number
+     Who16         |  16-bit whole-number
+     Who32         |  32-bit whole-number
+     Who64         |  64-bit whole-number
 
-c := "abc" `char array (multiple characters)`
+  -  Float         |  64-bit floating-point number
+  -  Float32       |  32-bit floating-point
+  -  Float64       |  64-bit floating-point number                 |
 
-d := true `bool`
+By default (we'll get into how to change it later), it will assign the following:`
 
-e := 1.23423 `double`
+a := 10 `Int`
+
+b := "z" `Char`
+
+c := "abc" `Array`
+
+d := true `Boolean`
+
+e := 1.23423 `Float`
 
 </code></pre><br><br>
 
