@@ -1,114 +1,109 @@
-body {
-  background: #12171d;
-  color: #aaa;
-  font-size: 16px;
-  line-height: 20px;
-  font-family: "Lucida Console", Monaco, monospace;
-  text-align: left;
-  font-weight: 1000;
-  margin: auto;
-}
-
-#content {
-  align: center;
-  max-width: 750px;
-  margin: auto;
-}
-
-a {
-  color: #8c143a;
-  font-weight: bold;
-}
-
-a:hover {
-  color: #8c143a;
-  text-decoration: none;
-}
-
-h1 {
-  color: #8c143a
-}
-
-h2 {
-  color: #8c143a
-}
-
-hr {
-  border: none;
-  height: 3px;
-  background-color: #8c143a;
-  max-width: 750px;
-}
-
-
-
 #header {
   padding: 30px 24px 24px 24px;
-  background: #ccc;
+  background: #f0f0f0;
 }
 
 #logo {
   text-align: left;
-  max-width: 750px;
+  max-width: 800px;
   margin: auto;
 }
 
 #logo a {
+  border-bottom: none;
   text-decoration: none;
 }
 
 #logo h2 {
   margin: 5px 0 0;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: -0.05em;
-  color: #0d1115;
+  color: #d11d57;
 }
 
 #navbar {
-  overflow: hidden;
-  border-top: 4px solid #ccc;
-  background: #0d1115;
-  padding: 0 0 0 0;
-  border-bottom-left-radius:  3px;
-  border-bottom-right-radius: 3px;
+  background: #1b1a1e;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
 
 #links {
-  max-width: 750px;
   margin: auto;
+  max-width: 800px;
 }
 
 #links a {
-  float: center;
+  border-bottom: none;
+  color: #f0f0f0;
   display: inline-block;
-  color: #fff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  transition: color 0.3s;
 }
 
 #links a:hover {
-  background-color: #8c143a;
-  border-bottom-left-radius:  5px;
-  border-bottom-right-radius: 5px;
+  color: #d11d57;
 }
 
 #links a.active {
-  background-color: #ccc;
-  color: #0d1115;
-  border-bottom-left-radius:  5px;
-  border-bottom-right-radius: 5px;
+  color: #d11d57;
+  border-bottom: 3px solid;
+  transition: border-bottom 0.3s;
+}
+
+body {
+  background: #f0f0f0;
+  color: #231a1c;
+  font-size: 13px;
+  font-family: "Lucida Console", Monaco, monospace;
+  text-align: left;
+  margin: auto;
+}
+
+#content {
+  align: center;
+  max-width: 800px;
+  line-height: 1.3em;
+  margin: auto;
+}
+
+a {
+  color: #d11d57;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid;
+  transition: border-bottom 0.25s;
+}
+
+a:hover {
+  border-bottom: none;
+  transition: border-bottom 0.25s;
+}
+
+h1 {
+  font-size: 17px;
+  color: #d11d57
+}
+
+h2 {
+  font-size: 15px;
+  color: #d11d57
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background-color: #d11d57;
 }
 
 #footer {
-  color: #ccc;
   padding: 30px 24px 24px 24px;
-  background: #0d1115;
+  color: #f0f0f0;
+  background: #1b1a1e;
   text-align: center;
 }
