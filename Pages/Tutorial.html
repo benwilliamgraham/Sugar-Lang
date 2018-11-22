@@ -10,8 +10,7 @@ Get an overview of how Sugar works, as well as how to use it effectively
 
 <h2>"Hello, Sugar"</h2><hr><pre><code class="language-sugar">
 `Run the Following Program to ensure that sugar is working:`
-main() :=
-  "Hello, Sugar" -> write
+"Hello, Sugar" -> write
 
 </code></pre><br><br>
 
@@ -39,15 +38,15 @@ Sugar is what is known as a strongly-typed language
 This means that a variable has a non-changing type
 For example:`
 
-a := 10 `'a' is set to an int (integer) value
+a := 10 `'a' is set to an Int (integer) value
 
 Integers are any whole number`
 
-b := "Test" `'b' is set to a string value
+b := "Test" `'b' is set to an Array of Characters
 
 strings are fixed lists of characters (letters, numbers, symbols)`
 
-c := true `'c' is set to a boolean value
+c := true `'c' is set to a Boolean value
 
 boolean values are either 'true' or 'false'
 This will become important later when you learn control flow`
@@ -118,7 +117,7 @@ Sugar uses the following:
 
   -  Float         |  64-bit floating-point number
   -  Float32       |  32-bit floating-point
-  -  Float64       |  64-bit floating-point number                 |
+  -  Float64       |  64-bit floating-point number
 
 By default (we'll get into how to change it later), it will assign the following:`
 
@@ -225,21 +224,6 @@ b := g(a)
 
 c := h(a + 10) + b
 
-`Sugar comes with the following build-in functions:`
-
-write(a) `writes the value of 'a' to the console`
-read() `reads input from the console`
-
-short(a) `converts 'a' to a short int (if applicable)`
-int(a) `converts 'a' to an int (if applicable)`
-long(a) `converts 'a' to a long int (if applicable)`
-char(a) `converts 'a' to a character (if applicable)`
-wchar(a) `converts 'a' to a wide character (if applicable)`
-string(a) `converts 'a' to a string (if applicable)`
-bool(a) `converts 'a' to an boolean (if applicable)`
-float(a) `converts 'a' to a single-precision floating point (if applicable)`
-double(a) `converts 'a' to a double-precision floating point (if applicable)`
-
 </code></pre><br><br>
 
 <h2>Defining Functions</h2><hr><pre><code class="language-sugar">
@@ -266,7 +250,7 @@ not provided with one
 Like variables, the return type of a function, as well as the parameter types
 can be specified:`
 
-int_multiply(x : float, y : float) : int :=
+int_multiply(x : Float, y : Float) : Int :=
   return x * y
 
 `Despite the two parameters being floats, 'int_multiply' will return an 'int'
@@ -274,45 +258,45 @@ as specified
 
 Custom operators can also be defined like functions:`
 
-(a : int) #^% (b : int) :=
-  return string(a + b - 109 // 3 + 8) + "ragus"
+(a : Int) #^% (b : Int) :=
+  return a + b ^ 3
 
 `Bonus, figure out what` 10 #^% 34 `will return`
 
 </code></pre><br><br>
 
 <h2>Overloading</h2><hr><pre><code class="language-sugar">
-`INSTALL`
+`Overloading`
 
 </code></pre><br><br>
 
 <h2>Control Flow</h2><hr><pre><code class="language-sugar">
-`INSTALL`
+`Control Flow`
 
 </code></pre><br><br>
 
-<h2>The Standard Library</h2><hr><pre><code class="language-sugar">
-`INSTALL`
+<h2>The Core Library</h2><hr><pre><code class="language-sugar">
+`Core`
 
 </code></pre><br><br>
 
 <h2>"Hello, Sugar" Revisited</h2><hr><pre><code class="language-sugar">
-`INSTALL`
+`Hello, Sugar`
 
 </code></pre><br><br>
 
-<h2>Inline C++</h2><hr><pre><code class="language-sugar">
-`INSTALL`
+<h2>File Importing</h2><hr><pre><code class="language-sugar">
+`File Importing`
 
 </code></pre><br><br>
 
-<h2>C, C++ Library Support</h2><hr><pre><code class="language-sugar">
-`INSTALL`
+<h2>C++ Library Support</h2><hr><pre><code class="language-sugar">
+`C++`
 
 </code></pre><br><br>
 
 <h2>More Resources</h2><hr><pre><code class="language-sugar">
-`INSTALL`
+`More`
 
 </code></pre><br><br>
 
